@@ -6,6 +6,6 @@ ENV DOCKER_BUCKET get.docker.com
 ENV DOCKER_VERSION 1.6.0
 
 RUN set -x \
-  && curl -sL "https://${DOCKER_BUCKET}/builds/Linux/x86_64/docker-$DOCKER_VERSION" \
-  > /usr/bin/docker; chmod +x /usr/bin/docker
+  && sudo curl -sL "https://${DOCKER_BUCKET}/builds/Linux/x86_64/docker-$DOCKER_VERSION" \
+  > /usr/bin/docker; sudo chmod +x /usr/bin/docker
   
